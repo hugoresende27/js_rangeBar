@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Acme&family=Assistant:wght@200;300&family=Baloo+2&family=Cairo:wght@200;600&family=Caveat:wght@400;700&family=Comforter+Brush&family=Exo+2:wght@100;300&family=Indie+Flower&family=Inter:wght@100;500&family=Lato:wght@100;400&family=M+PLUS+1:wght@100;400&family=M+PLUS+2:wght@100;500&family=M+PLUS+Code+Latin:wght@100;400&family=Merriweather:wght@300;700&family=Open+Sans:wght@300;600&family=Roboto+Slab:wght@100;400&family=Signika:wght@300&display=swap');
+
+:root
+{
+    --primary-cor:#409C32;
+    --secondary-cor:#265C1D;
+    --three-cor:#59DB46;
+    --four-cor:#5FE84A;
+    --five-cor:#50C23E;
+    --gold-cor:#FFC857;
+    --charcoal-cor:#2E4052;
+    --purple-cor:#412234;
+    --green-cor:#BDD9BF;
+}
+*{
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color: var(--charcoal-cor);
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 500;
+    display: flex;          /*coloca tudo em linha*/
+    flex-direction: column; /*coloca tudo em coluna*/
+    align-items: center;    /*alinha horizontalmente*/
+    justify-content: center;/*alinha tudo verticalmente com uso de height:100vh*/
+    height: 100vh;
+    overflow: hidden; /*BARRA DE SCROLL DOWN, HIDDEN ESCONDIDA*/
+    margin: 0;
+    overflow-x: hidden; /*REMOVER BARRA DE SCROLL HORIZONTAL*/
+}
+
+h2 {
+    position: absolute;
+    top:10px;
+}
+
+.rangeMain {
+    position: relative;
+}
+
+input[type='range']{
+    border-radius: 50%;
+    width: 300px;
+    margin: 18px 0;
+    -webkit-appearance: none;
+}
+
+input[type='range'] + label {
+    background-color: var(--gold-cor);
+    color: #000;
+    font-weight: 600;
+    position: absolute;
+    top:-25px;
+    left: 110px;
+    width: 80px;
+    padding: 5px 0;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+input[type='range']::-webkit-slider-runnable-track{
+    background-color: var(--gold-cor);
+    border-radius: 4px;
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+}
+
+
+input[type='range']:focus{
+    outline: none;
+}
+
+input[type='range']::-webkit-slider-thumb { /*cursor polegar*/
+    -webkit-appearance: none;
+    height: 24px;
+    width: 24px;
+    background: #fff;
+    border-radius: 50px;
+    border: 1px solid var(--purple-cor);
+    margin-top: -7px;
+    cursor: pointer;
+}
+
+/*FIREFOX ///////////////////////////////////////////////////////////*/
+
+
+input[type='range']::-moz-range-track{
+    background-color: var(--gold-cor);
+    border-radius: 4px;
+    width: 100%;
+    height: 13px;
+    cursor: pointer;
+}
+
+
+
+input[type='range']::-moz-range-thumb { /*cursor polegar*/
+    -webkit-appearance: none;
+    height: 24px;
+    width: 24px;
+    background: #fff;
+    border-radius: 50%;
+    border: 1px solid var(--purple-cor);
+    margin-top: -7px;
+    cursor: pointer;
+}
+
+
+/*///////////////MEDIA QUERYS////////////////////////////////////////////////////////////////////*/
+
+@media(max-width: 480px)        /*para ecras mais pequenos*/
+{
+    body{
+        overflow:visible;
+    }
+
+    footer 
+    {
+        display: none;
+    };
+
+}
+
+@media (max-width: 800px)
+{
+    body{
+        overflow:visible;
+    }
+    footer 
+    {
+        /* display: none; */
+    };
+  
+
+}
+
+@media (max-width : 600px)
+{
+
+}
+
+
+/*estilos do footer */
+
+footer{
+    font-size: 0.8rem;
+    color: #fff;
+    font-family:'Inconsolata',sans-serif ;
+    text-align: center;
+    /* border: 1px solid var(--charcoal-cor); */
+    position: absolute;
+     bottom: 0rem; 
+     left: 50%; 
+    transform: translate(-50%, -50%);
+    font-weight: 500;
+    padding: 0rem 0.9rem;
+}
+
+footer:hover{
+    background-color: #333;
+    color: #fff;
+    border-radius: 20px;
+    transform: translate(-50%,-50%) scale(1.2);
+}
+footer:hover a{
+    color: yellow;
+    font-weight: 700;
+}
+footer:hover a:hover{
+    font-weight: 900;
+    color:greenyellow;
+}
+
+footer a{
+   color: #fff;  /*cor dos links a preto*/
+   text-decoration: none;     /*retira o sublinhado dos links*/
+  
+}
+
+footer a:hover{
+    color: var(--gold-cor);
+}
+
+
+
+

@@ -78,7 +78,7 @@ input[type='range']::-webkit-slider-thumb { /*cursor polegar*/
     -webkit-appearance: none;
     height: 24px;
     width: 24px;
-    background: #fff;
+    background: var(--green-cor);
     border-radius: 50px;
     border: 1px solid var(--purple-cor);
     margin-top: -7px;
